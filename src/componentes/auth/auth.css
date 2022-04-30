@@ -1,0 +1,334 @@
+/*===============================*/
+/*              Fots              */
+/*===============================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+/*===============================*/
+/*              Fots              */
+/*===============================*/
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*===============================*/
+/*           Variables            */
+/*===============================*/
+:root {
+  --main-color: #eaa023;
+  --dark: #0c1023;
+  --dark-light: #191f3a;
+  --white: #ffc;
+  --white-light: #c8c8c8;
+  --shadow: 0 0 15px rgba( 0, 0, 0, 0.25 );
+  --cursive-font: 'Dancing Script', cursive;
+  scroll-behavior: smooth;
+}
+/*===============================*/
+/*           Variables            */
+/*===============================*/
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*===============================*/
+/*         General Styles         */
+/*===============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+/*===============================*/
+/*         General Styles         */
+/*===============================*/
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*===============================*/
+/*          Login Style           */
+/*===============================*/
+.login-body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark);
+  position: relative;
+  z-index: 1;
+}
+
+.login-container-row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-box {
+    width: 800px;
+    height: 500px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.login-box-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box-col1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('https://raw.githubusercontent.com/Newflaree/completosland/main/img/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-box-col1-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.login-box-col1-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+}
+
+.login-box-col1-title {
+    font-family: var( --cursive-font );
+    font-size: 50px;
+    line-height: 40px;
+    margin: 0 0 5px;
+    font-weight: 700;
+    color: var( --white );
+}
+
+.login-box-col1-parrafo {
+    padding: 30px;
+    font-family: var( --cursive-font );
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 5px;
+    font-weight: 550;
+    color: white;
+}
+
+.login-box-col1-redes {
+    margin-top: 20px;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.login-redes-sociales {
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.login-redes-sociales-li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.login-redes-sociales-img {
+    width: 30px;
+    height: 30px;
+    margin: 0 0 5px;
+    cursor: pointer;
+}
+
+.login-box-col2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+}
+
+.login-box-col2-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.login-box-col2-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.login-input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-input-li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    list-style: none;
+}
+
+.login-input-li h1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 35px;
+    line-height: 30px;
+    margin: 0 0 5px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.login-input-li input {
+    font-size: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #001fa8
+}
+
+.separacion {
+    margin-top: 30px;
+}
+
+.login-input-button {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #001fa8;
+    color: #ffdea4;
+    transition-duration: 0.4s;
+    transition-property: background-color;
+    border: none;
+}
+
+.login-input-button:hover {
+    background-color: #001366;
+}
+
+.separacion-button {
+    margin-top: 30px;
+}
+
+.separacion-button1 {
+    margin-top: 10px;
+}
+
+.login-input-parrafo {
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.registrate {
+    margin-left: 5px;
+}
+
+.login-input-error {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 10px;
+    padding: 5px;
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 180, 180);
+    border-radius: 3px;
+    border: 1px solid rgb(255, 0, 0);
+}
+/*===============================*/
+/*          Login Style           */
+/*===============================*/
+
+
+/*-----------------------------------------------------------------------------------*/
