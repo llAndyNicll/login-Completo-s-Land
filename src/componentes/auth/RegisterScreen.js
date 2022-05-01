@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm/useForm';
 import validator from 'validator';
-import { useDispatch } from 'react-redux';
-import { startRegister } from '../../action/auth';
+import { useDispatch, useSelector } from 'react-redux';
+import { errorClear, errorMsg, startRegister } from '../../action/auth';
 
 import '../auth/auth.css';
 
 export const RegisterScreen = () => {
 
-  const [ error, setError ] = useState( '' );
+  const error = useSelector( state => state.error );
+
+  const location = useLocation();
 
   const dispatch = useDispatch();
 
@@ -36,24 +38,22 @@ export const RegisterScreen = () => {
   };
 
   const isFormValid = () => {
-
-      setError( '' );
       
       if ( !validator.isEmail( email ) ) {
   
-        setError( 'El correo electrónico no es valido.' )
+        dispatch( errorMsg( 'El correo electrónico no es valido.' ) );
   
         return false;
   
       } else if ( password.length < 5 ) {
   
-        setError( 'La contraseña debe tener al menos 6 caracteres y coincidir entre sí.' )
+        dispatch( errorMsg( 'La contraseña debe tener al menos 6 caracteres.' ) );
   
         return false;
   
       } else if ( password !== password2 ) {
 
-        setError( 'Las contraseñas no coinciden entre sí.' )
+        dispatch( errorMsg( 'Las contraseñas no coinciden.' ) );
 
         return false;
 
@@ -80,6 +80,12 @@ export const RegisterScreen = () => {
     console.log( 'Twitter Register' );
   
   };
+
+  useEffect( () => {
+
+    dispatch( errorClear() );
+
+  }, [ location.pathname, dispatch ] )
 
   return (
     <div className='login-body'>
@@ -210,11 +216,11 @@ export const RegisterScreen = () => {
                         </li>
 
                         {
-                          error ? (
+                          error.error ? (
 
                             <li className='login-input-li animate__animated animate__fadeIn animate__delay-0.3s'>
                               <h2 className='login-input-error'>
-                                { error }
+                                { error.msg }
                               </h2>
                             </li>
 

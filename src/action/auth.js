@@ -1,4 +1,3 @@
-import Swal from "sweetalert2";
 import { fetchSinToken } from "../helpers/fetch";
 
 export const startLogin = ( email, password ) => {
@@ -18,13 +17,13 @@ export const startLogin = ( email, password ) => {
 
             localStorage.setItem( 'user', JSON.stringify( body ) );
 
+            dispatch( errorClear() );
+
         } else {
 
-            // El error se debe de manejar en a base de redux y en el backend. y mostrarlo en el componente.
+            const msg = body.msg || body.errors.errors[ 0 ].msg;
 
-            // Swal.fire( 'Error', body.msg, 'error' );
-
-            console.log( 'Error', body.msg );
+            dispatch( errorMsg( msg ));
 
         };
 
@@ -47,13 +46,13 @@ export const startRegister = ( name, email, password ) => {
 
             dispatch( login({ ...body }));
 
+            dispatch( errorClear() );
+
         } else {
 
-            // El error se debe de manejar en a base de redux y en el backend. y mostrarlo en el componente.
+            const msg = body.msg || body.errors.errors[ 0 ].msg;
 
-            // Swal.fire( 'Error', body.msg, 'error' );
-
-            console.log( 'Error', body.msg );
+            dispatch( errorMsg( msg ));
 
         };
 
@@ -72,6 +71,19 @@ export const startLogout = () => {
     };
 
 };
+
+export const errorMsg = ( msg ) => ({
+
+    type: 'ERROR_MSG',
+    payload: msg
+
+});
+
+export const errorClear = () => ({
+
+    type: 'CLEAR_ERROR_MSG'
+
+});
 
 const login = ( user ) => ({
 
