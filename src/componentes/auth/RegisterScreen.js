@@ -121,7 +121,7 @@ export const RegisterScreen = () => {
                                 onClick={ handleGoogleRegister }
                                 className='login-redes-sociales-img' 
                                 src='https://cdn-icons-png.flaticon.com/512/300/300221.png' 
-                                alt='facebook' 
+                                alt='google' 
                               />
                             </li>
 
@@ -139,7 +139,7 @@ export const RegisterScreen = () => {
                                 onClick={ handleTwitterRegister } 
                                 className='login-redes-sociales-img' 
                                 src='https://cdn-icons-png.flaticon.com/512/733/733579.png' 
-                                alt='facebook' 
+                                alt='twitter' 
                               />
                             </li>
 

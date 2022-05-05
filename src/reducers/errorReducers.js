@@ -4,7 +4,7 @@ const initialSate = {
     msg: ''
 };
 
-export const errorReducers = ( state =initialSate, action ) => {
+export const errorReducers = ( state = initialSate, action ) => {
 
     switch ( action.type ) {
 
